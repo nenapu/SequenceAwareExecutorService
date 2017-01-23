@@ -18,7 +18,7 @@ services.
 <p>
 To achieve this SequenceAwareExecutorService uses its own SequenceAwareExecutorJob which 
 holds your actual task and a reference which will be used to identify the related tasks. There 
-are two types SequentialExecutorJob to cater Runnable tasks and Callable tasks.
+are two types SequenceAwareExecutorJob to cater Runnable tasks and Callable tasks.
 Each job will have a unique reference and related reference. The SequenceAwareExecutorService
 works on related reference.
 </p>
