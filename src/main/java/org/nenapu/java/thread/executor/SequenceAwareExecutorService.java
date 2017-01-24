@@ -147,7 +147,7 @@ public final class SequenceAwareExecutorService {
 	 * @param task
 	 * @throws Exception
 	 */
-	public synchronized void submit(RunnableJob task) throws Exception{
+	public void submit(RunnableJob task) throws Exception{
 		if(isStopped()){ 
 			throw new IllegalStateException("SequenceAwareExecutorService is stopped");
 		}
@@ -162,7 +162,7 @@ public final class SequenceAwareExecutorService {
 	 * @param task
 	 * @throws Exception
 	 */
-	public synchronized <T> Future<T> submit(CallableJob<T> task) throws Exception{
+	public <T> Future<T> submit(CallableJob<T> task) throws Exception{
 		if(isStopped()){ 
 			throw new IllegalStateException("SequenceAwareExecutorService is stopped");
 		}
